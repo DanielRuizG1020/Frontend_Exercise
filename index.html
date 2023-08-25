@@ -1,8 +1,13 @@
 <!doctype html>
 <html lang="eng-US">
   <head>
+    
     <meta charset="utf-8" />
-    <title>Mi sitio web</title>
+    <meta name="author" content="Daniel Ruiz" />
+<meta
+  name="description"
+  content="Actividad Frontend HTML" />
+    <title>HTML</title>
   </head>
   <body>
     <h1>HTML</h1>
@@ -46,9 +51,216 @@
          <h2><b>Elementos </b></h2>
          Los elementos son la estructura básica de HTML. Los elementos tienen dos propiedades <br>
          básicas: atributos y contenido. Cada atributo y contenido tiene ciertas restricciones para que se <br>
+         considere válido al documento HTML. Un elemento generalmente tiene una etiqueta de inicio <br>
+         (por ejemplo, <mark>&lt; nombre-de-elemento &gt;</mark>) y una etiqueta de cierre (por ejemplo,<br>
+         <mark&lt;/ nombre-de-elemento &gt;></mark>). Los atributos del elemento están contenidos en la etiqueta de <br>
+         inicio y el contenido está ubicado entre las dos etiquetas (por ejemplo,<mark>&lt;/ nombre-de-elemento <br>atributo="valor"&gt;Contenido&lt;/nombre-de-elemento&gt;</mark>). Algunos elementos, tales<br>
+         como <mark>&lt;br&gt;</mark>, no tienen contenido ni llevan una etiqueta de cierre. Debajo se listan varios tipos de <br>
+         elementos de marcado usados en HTML.
+         <br><br>
+         El marcado <em>estructural</em> describe el propósito del texto. Por ejemplo,<mark>&lt;h2&gt;Golf&lt;/h2&gt;</mark> establece <br>
+         &lt;&lt;Golf&gt;&gt;como un encabezamiento de segundo nivel, el cual se mostraría en un navegador de una <br>
+         manera similar al título &lt;&lt;Marcador HTML&gt;&gt; al principio de esta sección. El marcado estructural no <br>
+         define cómo se verá el elemento, pero la mayoría de los navegadores web han estandarizado el<br>
+         formato de los elementos. Puede aplicarse un formato específico al texto por medio de <em>hojas de estilo en cascada.</em><br><br>
+         El marcado presentacional describe la apariencia del texto, sin importar su función. Por ejemplo,<br>
+         <mark>&lt;b&gt;negrita&lt;/b&gt;</mark>indica que los navegadores web visuales deben mostrar el texto en <b>negrita</b>,<br>
+         pero no indica qué deben hacer los navegadores web que muestran el contenido de otra manera<br>
+         (por ejemplo, los que leen el texto en voz alta). En el caso de <mark>&lt;b&gt;negrita&lt;/b&gt;</mark> e <br>
+         <mark>&lt;i&gt;itálica&lt;/i&gt;</mark>,existen elementos que se ven de la misma manera pero tienen una<br>
+         naturaleza más semántica:<mark>&lt;strong&gt;énfasis fuerte&lt;/strong&gt;</mark> y <mark>&lt;em&gt;énfasis&lt;/em&gt;</mark><br><br>
 
-                             
-    
+         Es fácil ver cómo un lector de pantalla debería interpretar estos dos elementos. Sin embargo<br>
+         son equivalentes a sus correspondientes elementos presentacionales: un lector de pantalla no <br>
+         debería decir más fuerte el nombre de un libro, aunque el nombre resalte en <em>itálicas</em> en una <br>
+         pantalla. La mayoría del marcado presentacional ha sido desechada desde la versión 4.01, en  <br>
+         favor de las hojas de estilo en cascada.<br><br>
+
+         El marcado <em>hipertextual </em>se utiliza para enlazar partes del documento con otros documentos o <br>
+         con otras partes del mismo documento. Para crear un enlace es necesario utilizar la etiqueta de <br>
+         ancla &lt;a&gt; junto con el atributo <mark>href</mark> , que establecerá la dirección URL a la que apunta el <br>
+         enlace. Por ejemplo, un enlace que muestre el texto de la dirección y vaya hacia nuestra <br>
+         Wikipedia podría ser de la forma &lt;a <br>
+         <mark>href=<q>https://www.wikipedia.org</q><q>&gt;https://www.wikipedia.org&lt;/a&gt;</q></mark>.Tambien se <br>
+         pueden crear enlaces sobre otros objetos, tales como imágenes <mark>&lt;a href=<q>enlace</q>&gt;&lt;img<br>src=<q>imagen</q>/&gt;&lt;/a&gt;</mark>.<br><br>
+
+         <h2>Etiquetas HTML basicas<hr></h2>
+
+        <ul>
+            <li><mark>&lt;html&gt;</mark>: define el inicio del documento HTML, le indica al navegador que lo que<br>
+                viene a continuación debe ser interpretado como código HTML. Esto es así de <em> facto</em>,<br>
+                ya que en teoría lo que define el tipo de documento es el DOCTYPE, que significa la <br>
+                palabra justo tras DOCTYPE el tag de raíz.<br>
+            </li>
+            <li><mark>&lt;script&gt;</mark>:incrusta un script en una web, o llama a uno mediante <mark>src=<q>url del<br>script.</q></mark>Se recomienda incluir el tipo MIME en el atributo <mark>type</mark>,en el caso de <br>
+                JavaScript <mark>text/javascript</mark>.<br>
+           
+        
+            <li><mark>&lt;head&gt;</mark>:define la cabecera del documento HTML; esta cabecera suele contener <br>
+                información sobre el documento que no se muestra directamente al usuario como,<br>
+                or ejemplo, el título de la ventana del navegador. Dentro de la cabecera <mark>&lt;head&gt;</mark> es <br>
+                posible encontrar:<br>
+            <ul> 
+                <li><mark>&lt;title&gt;</mark>:define el título de la página. Por lo general, el título aparece en <br>
+                    la barra de título encima de la ventana.
+                </li>
+                <li><mark>&lt;link&gt;</mark>:para vincular el sitio a hojas de estilo o iconos. Por <br>
+                    ejemplo:<mark>&lt;link rel = <q>stylesheet</q> href=<q>/style.css</q>&gt; <br>
+                    type=<q>text/css</q>&gt;</mark>
+
+
+                </li> 
+                <li><mark>&lt;style&gt;</mark>:para colocar el estilo interno de la página; ya sea usando CSS <br>
+                    u otros lenguajes similares. No es necesario colocarlo si se va a vincular <br>
+                    a un archivo externo usando la etiqueta <mark>&lt;link&gt;</mark>.
+                </li> 
+                <li><mark>&lt;meta&gt;</mark>: para metadatos como la autoría o la licencia, incluso para <br>
+                    indicar parámetros http (mediante <mark>http-equiv=</mark>"") cuando no se <br>
+                    pueden modificar por no estar disponible la configuración o por <br>
+                    dificultades con server-side scripting.<br>
+                </li>
+            </li>
+        </ul>
+        </ul>
+    <ul>
+            <li><mark>&lt;body&gt;</mark>:define el contenido principal o cuerpo del documento. Esta es la parte del <br>
+                documento html que se muestra en el navegador; dentro de esta etiqueta pueden<br>
+                definirse propiedades comunes a toda la página, como color de fondo y márgenes. <br>
+                Dentro del cuerpo <mark>&lt;body&gt;</mark> es posible encontrar numerosas etiquetas. A continuación <br>
+                se indican algunas a modo de ejemplo:
+                <ul>
+                <li><mark>&lt;article&gt;</mark>:Representa una composición auto-contenida en un <br>
+                    documento, página, una aplicación o en el sitio, que se destina a distribuir <br>
+                    de forma independiente o re-utilizable.<br>
+
+                </li>
+                <li><mark>&lt;h1&gt;a&lt;h6&gt;</mark>:encabezados o títulos del documento con diferente <br>
+                    relevancia.
+                </li>
+                <li><mark>&lt;table&gt;</mark>:define una tabla.
+                    <ol>
+                        <mark>&lt;tr&gt;</mark>: fila de una tabla.
+                    
+                    </ol>
+                    <ol>
+                        <mark>&lt;td&gt;</mark>:  celda de una tabla (debe estar dentro de una fila).
+                    
+                    </ol>
+                    
+                </li>
+
+                <li><mark>&lt;footer&gt;</mark>: representa el pie de un documento o sección. La información <br>
+                    que se suele añadir en este bloque es el autor del documento, enlaces a <br>
+                    contenido relacionado, información de copyright, avisos legales, etc.
+
+                </li>
+
+                <li><mark>&lt;a&gt;</mark>:  hipervínculo o enlace, dentro o fuera del sitio web. Debe definirse el <br>
+                    parámetro de pasada por medio del atributo <em>href</em>. Por ejemplo:<mark>&lt;a<br>
+                        href=<q>http://www.example.com</q>title=<q>Ejemplo</q><br>
+                        target=<q>_blank</q>tabindex=<q>1</q>&gt;Ejemplo&lt;/a&gt;</mark> se representa<br> como ejemplo.
+
+                
+                </li>
+
+                <li><mark>&lt;div&gt;</mark>:  división de la página. Se recomienda, junto con css, en vez de  <br>
+                    <mark>&lt;table&gt;</mark> cuando se desea alinear el contenido.
+
+                </li>
+
+                <li><mark>&lt;img&gt;</mark>: imagen. Requiere del atributo <em>src</em>, que indica la ruta en la que se  <br>
+                    encuentra la imagen. Por ejemplo: <mark>&lt;img <br>
+                        src=<q>./imágenes/mifoto.jpg</q>/&gt;</mark>.Es conveniente, por <br>accesibilidad, poner un atributo <mark>alt=<q>texto alternativo</q></mark>
+
+                </li>
+
+                <li><mark>&lt;ol&gt;</mark>:  etiqueta para listas ordenadas.
+                </li>
+                    
+
+                <li><mark>&lt;ul&gt;</mark>: etiqueta para listas desordenadas.
+
+                      
+                    
+
+                </li>
+                <li><mark>&lt;li&gt;</mark>:  etiqueta elementos de una lista.
+
+
+                      
+                    
+
+                </li>
+                <li><mark>&lt;b&gt;</mark>:  texto en negrita (etiqueta desaprobada. Se recomienda usar la <br> etiqueta <mark>&lt;strong&gt;</mark>)
+
+
+                      
+                    
+
+                </li>
+                <li><mark>&lt;i&gt;</mark>:  texto en cursiva (etiqueta desaprobada. Se recomienda usar la  <br> etiqueta <mark>&lt;em&gt;</mark>)
+
+
+                      
+                    
+
+                </li>
+                <li><mark>&lt;s&gt;</mark>:  exto tachado (etiqueta desaprobada. Se recomienda usar la  <br> etiqueta <mark>&lt;del&gt;</mark>)
+
+
+                      
+                    
+
+                </li>
+                <li><mark>&lt;u&gt;</mark>:  Antes texto subrayado. A partir de HTML 5 define porciones de texto <br>
+                diferenciadas o destacadas del resto, para indicar correcciones por <br>
+                ejemplo (etiqueta desaprobada en HTML 4.01 y redefinida en HTML 5).
+                </li>
+
+                <li><mark>&lt;main&gt;</mark>:  división estructural de la página que engloba el contenido<br>
+                    principal de la misma. Dentro de esta etiqueta, por ejemplo, encontramos  <br>
+                    los <mark>&lt;article&gt;</mark>
+                    </li>
+                    <li><mark>&lt;span&gt;</mark>:  Sirve para diferenciar un texto de otro.
+                        
+                        </li>    
+                        <li><mark>&lt;br&gt;</mark>:  Sirve para provocar un salto de línea. Esta etiqueta no se cierra.
+                        
+                        </li>
+                        <li><mark>&lt;hr&gt;</mark>:  Sirve para provocar un cambio de tema entre párrafos. Esta <br>
+                            etiqueta no se cierra.
+                        </li> 
+                        <li><mark>&lt;details&gt;</mark>:  Sirve para crear una sección desplegable
+                        
+                        </li>    
+                        <li><mark>&lt;summary&gt;</mark>:  Sirve para crear el título de la sección desplegable
+                        </li>              
+                    </ul>
+
+           
+
+
+        </ul>
+La mayoría de etiquetas deben cerrarse como se abren, pero con una barra ( / ) tal como se<br>
+ muestra en los siguientes ejemplos:
+
+<ul>
+
+    <li><mark>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Contenido de una celda &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</mark>.
+</li>
+<li>
+    <mark>&lt;table&gt;Código de un script integrado en la página&lt;/script&gt;</mark>.
+</li>
+<li>
+    <mark>&lt;header&gt;División estructural en la parte del <br>
+        contenido.&lt;/headert&gt;</mark>.
+</li>
+</ul>
+
+
+
+
+
     </p>
   </body>
 </html>
